@@ -10,7 +10,7 @@ void shell()
             char buffer[1000000];
             int res;
 
-            printf("NSH$>> ");
+            printf("JHG$>> ");
             fgets(buffer, 1000000, stdin);
 
             if((strncmp("echo", buffer, 3)) == 0)
