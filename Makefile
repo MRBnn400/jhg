@@ -3,6 +3,9 @@ sdir := src
 bdir := build
 args := -I include
 
+setup:
+	mkdir $(bdir)
+
 compile:
 	$(compiler) $(args) $(sdir)/main.c -o $(bdir)/main
 
