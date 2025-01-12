@@ -17,3 +17,4 @@ install:
 	mkdir $(bdir)
 	$(compiler) $(args) $(sdir)/main.c -o $(bdir)/main
 	sudo cp $(bdir)/main /bin/jhgconsole
+	rm -r $(bdir)
