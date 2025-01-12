@@ -24,7 +24,7 @@ void server()
         printf("error setting socket options\n");
     }
 
-    len = sizeof(struct sockaddr *);
+    len = sizeof(struct sockaddr_in);
 
     host_addr.sin_family = AF_INET;
     host_addr.sin_port = htons(7777);
@@ -46,7 +46,7 @@ void server()
     {
         if((clifd = accept(sockfd, (struct sockaddr *)&cli_addr, &len)))
         {
-            printf("GOT CONNECTION FROM: %s", inet_ntoa(cli_addr.sin_addr));
+            printf("GOT CONNECTION FROM: %s %d\n", inet_ntoa(cli_addr.sin_addr), ntohs(cli_addr.sin_port));
             send(clifd, "welcome\n", sizeof("welcome\n"), 0);
             recv(clifd, buffer, 4096, 0);
             printf("%s", buffer);

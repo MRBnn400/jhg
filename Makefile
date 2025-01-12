@@ -3,6 +3,7 @@ sdir := src
 bdir := build
 args := -I include
 
+#only for developers if you want to install do make install
 setup:
 	mkdir $(bdir)
 
@@ -13,5 +14,6 @@ clean:
 	rm $(bdir)/main.bin
 
 install:
-	$(compiler) $(args) $(sdir)/main.c -o $(bdir)/jhgconsole
-	sudo cp $(bdir)/jhgconsole /bin/jhgconsole
+	mkdir $(bdir)
+	$(compiler) $(args) $(sdir)/main.c -o $(bdir)/main
+	sudo cp $(bdir)/main /bin/jhgconsole
