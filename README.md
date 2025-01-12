@@ -5,3 +5,8 @@ to compile:
 
 install gcc
 run "make install"
+
+on mac:
+
+do "make setup" only if runing for the first time
+then do "make setup"
