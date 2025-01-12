@@ -1,5 +1,4 @@
-this is a multifunctional software i am developing for cyber security
-this is our first version it is bugy it might work on your systems
+this is a tool designed for cber security this is an open source project anyone who wants to contribute may contribute
 
 to compile:
 
