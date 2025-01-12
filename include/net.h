@@ -46,7 +46,7 @@ void server()
     {
         if((clifd = accept(sockfd, (struct sockaddr *)&cli_addr, &len)))
         {
-            printf("GOT CONNECTION FROM: %s", inet_ntoa(cli_addr.sin_addr));
+            printf("GOT CONNECTION FROM: %s\n", inet_ntoa(cli_addr.sin_addr));
             send(clifd, "welcome\n", sizeof("welcome\n"), 0);
             recv(clifd, buffer, 4096, 0);
             printf("%s", buffer);
