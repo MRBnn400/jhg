@@ -24,7 +24,7 @@ void server()
         printf("error setting socket options\n");
     }
 
-    len = sizeof(struct sockaddr *);
+    len = sizeof(struct sockaddr_in);
 
     host_addr.sin_family = AF_INET;
     host_addr.sin_port = htons(7777);
